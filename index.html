@@ -17,11 +17,42 @@
     .members {
       font-size: 36px;
       margin-left: 15px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .member-list {
+      margin-top: 20px;
+      margin-left: 30px;
+      font-size: 24px;
+      display: none;
+      list-style: none;
+      padding: 0;
+    }
+    .member-list li {
+      margin-bottom: 8px;
     }
   </style>
 </head>
 <body>
   <h1>acid collective</h1>
-  <div class="members">members</div>
+  <div class="members" onclick="toggleMembers()">members</div>
+  <ul class="member-list" id="memberList">
+    <li>Piecemissing</li>
+    <li>Wuuper</li>
+    <li>LSD!Phantom</li>
+    <li>Mourn</li>
+    <li>Origami</li>
+    <li>DaRabbitz</li>
+    <li>Pluck</li>
+    <li>Adrian</li>
+    <li>Vib</li>
+  </ul>
+
+  <script>
+    function toggleMembers() {
+      const list = document.getElementById('memberList');
+      list.style.display = list.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
 </body>
 </html>
